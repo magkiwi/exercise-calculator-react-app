@@ -32,6 +32,16 @@ export const baseTheme: ThemeOptions = {
   },
 
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundSize: 'cover',
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'top left',
+          backgroundImage: 'url(/assets/background.png)'
+        }
+      }
+    },
     MuiTypography: {
       styleOverrides: {
         h1: {
