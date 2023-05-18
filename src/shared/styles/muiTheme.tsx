@@ -24,6 +24,9 @@ export const themePalette = {
 }
 
 export const baseTheme: ThemeOptions = {
+  typography: {
+    fontFamily: 'Lora, sans-serif'
+  },
   palette: {
     ...themePalette.palette
   },

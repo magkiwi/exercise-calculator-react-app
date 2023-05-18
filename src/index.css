@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('shared/fonts/Lora-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}
