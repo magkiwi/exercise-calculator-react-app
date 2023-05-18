@@ -1,0 +1,87 @@
+[
+  {
+    "group": "Cleaning",
+    "name": "Washing-up",
+    "MET": 2
+  },
+  {
+    "group": "Cleaning",
+    "name": "Vacuming",
+    "MET": 4
+  },
+  {
+    "group": "Cleaning",
+    "name": "Washing the floor",
+    "MET": 4
+  },
+  {
+    "group": "Cleaning",
+    "name": "Ironing",
+    "MET": 3.5
+  },
+  {
+    "group": "Cleaning",
+    "name": "Washing the windows",
+    "MET": 4
+  },
+  {
+    "group": "Cleaning",
+    "name": "Dusting",
+    "MET": 2.5
+  },
+  {
+    "group": "Cleaning",
+    "name": "Folding laundry",
+    "MET": 2.3
+  },
+  {
+    "group": "Outdoor Activities",
+    "name": "Walking: slow",
+    "MET": 2.5
+  },
+  {
+    "group": "Outdoor Activities",
+    "name": "Walking: moderate",
+    "MET": 3.5
+  },
+  {
+    "group": "Outdoor Activities",
+    "name": "Walking: fast",
+    "MET": 4.5
+  },
+  {
+    "group": "Outdoor Activities",
+    "name": "Running: moderate",
+    "MET": 8
+  },
+  {
+    "group": "Outdoor Activities",
+    "name": "Running: fast",
+    "MET": 14
+  },
+  {
+    "group": "Outdoor Activities",
+    "name": "Bicycling: for pleasure",
+    "MET": 5
+  },
+  {
+    "group": "Outdoor Activities",
+    "name": "Bicycling: moderate",
+    "MET": 10
+  },
+  {
+    "group": "Outdoor Activities",
+    "name": "Bicycling: fast",
+    "MET": 13
+  },
+  {
+    "group": "Outdoor Activities",
+    "name": "Swimming: moderate",
+    "MET": 6
+  },
+  {
+    "group": "Outdoor Activities",
+    "name": "Swimming: fast",
+    "MET": 9
+  }
+]
