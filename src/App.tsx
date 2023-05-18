@@ -5,6 +5,7 @@ import { CssBaseline } from '@mui/material'
 import { ThemeProvider } from '@mui/material/styles'
 
 import { muiTheme } from 'shared/styles/muiTheme'
+import { Root } from 'views/Root'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -21,7 +22,7 @@ const AppWithTheme = () => {
   return (
       <ThemeProvider theme={theme}>
         <CssBaseline/>
-            hello
+            <Root />
       </ThemeProvider>
   )
 }
