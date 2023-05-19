@@ -6,6 +6,7 @@ import { ThemeProvider } from '@mui/material/styles'
 
 import { muiTheme } from 'shared/styles/muiTheme'
 import { Root } from 'views/Root'
+import { ExercisesContextProvider } from './contexts/ExercisesContext/ExercisesContext'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -31,7 +32,9 @@ const App = () => {
   return (
       <Router>
           <QueryClientProvider client={queryClient}>
-              <AppWithTheme/>
+              <ExercisesContextProvider>
+                  <AppWithTheme/>
+              </ExercisesContextProvider>
           </QueryClientProvider>
       </Router>
   )
