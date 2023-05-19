@@ -5,3 +5,11 @@
     font-style: normal;
     font-display: fallback;
 }
+
+@font-face {
+    font-family: 'Lora Bold';
+    src: url('shared/fonts/Lora-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: fallback;
+}

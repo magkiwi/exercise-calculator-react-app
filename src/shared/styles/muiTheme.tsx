@@ -2,6 +2,13 @@ import { type ThemeOptions } from '@mui/material/styles'
 import { grey } from '@mui/material/colors'
 import { createTheme } from '@mui/material'
 
+declare module '@mui/material' {
+  interface textColor {
+    black: string
+    dark: string
+  }
+}
+
 export const themePalette = {
   palette: {
     primary: {
@@ -15,10 +22,6 @@ export const themePalette = {
     },
     error: {
       main: '#FF7777'
-    },
-    black: {
-      main: '#0C0C18',
-      contrastText: '#F4f9f4'
     }
   }
 }
