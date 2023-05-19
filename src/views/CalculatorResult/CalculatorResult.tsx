@@ -6,7 +6,8 @@ import { Favorite } from '@mui/icons-material'
 
 const StyledBox = styled(Box)((theme) => ({
   padding: 4,
-  border: `1px solid ${theme.theme.palette.secondary.main}`
+  border: `1px solid ${theme.theme.palette.secondary.main}`,
+  textAlign: 'center'
 }))
 
 export const CalculatorResult = () => {

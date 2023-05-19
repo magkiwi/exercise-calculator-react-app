@@ -4,6 +4,7 @@ export interface ContextProps {
   currentExercise?: Exercise | null
   userWeight?: number
   exerciseDuration?: number
+  totalBurnedCalories: number
 
 }
 

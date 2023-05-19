@@ -1,23 +1,41 @@
-import React, { createContext, type FC, type ReactNode, useMemo, useState } from 'react'
+import React, { createContext, type FC, type ReactNode, useEffect, useMemo, useState } from 'react'
 
 import { type CalculatorFields, type ContextProps } from './ExercisesContext.types'
+import { calculateCalories } from '../../shared/helpers/calculateCalories'
 
 const defaultContext: ContextProps = {
   setCalculatorExercise: () => null,
   calculatorExercise: undefined,
   currentExercise: undefined,
   userWeight: undefined,
-  exerciseDuration: undefined
+  exerciseDuration: undefined,
+  totalBurnedCalories: 0
 }
 
 export const ExercisesContext = createContext(defaultContext)
 
 export const ExercisesContextProvider: FC<{ children?: ReactNode }> = ({ children }) => {
   const [calculatorExercise, setCalculatorExercise] = useState<CalculatorFields>()
+  const [allExercises, setAllExercises] = useState<CalculatorFields[]>([])
+  const [totalBurnedCalories, setTotalBurnedCalories] = useState<number>(0)
 
   const currentExercise = useMemo(() => calculatorExercise?.exercise, [calculatorExercise])
   const userWeight = useMemo(() => calculatorExercise?.weight, [calculatorExercise])
   const exerciseDuration = useMemo(() => calculatorExercise?.duration, [calculatorExercise])
+
+  useEffect(() => {
+    if (calculatorExercise) setAllExercises([...allExercises, calculatorExercise])
+  }, [calculatorExercise])
+
+  useEffect(() => {
+    if (allExercises.length > 0) {
+      const total: number = allExercises.reduce(
+        function (acc, obj) {
+          return acc + calculateCalories(obj)
+        }, 0)
+      setTotalBurnedCalories(total)
+    }
+  }, [allExercises])
 
   return (
         <ExercisesContext.Provider
@@ -26,7 +44,8 @@ export const ExercisesContextProvider: FC<{ children?: ReactNode }> = ({ childre
               setCalculatorExercise,
               currentExercise,
               userWeight,
-              exerciseDuration
+              exerciseDuration,
+              totalBurnedCalories
             }}
         >
             {children}
