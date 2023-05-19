@@ -48,6 +48,7 @@ export const ExerciseCalculatorForm = () => {
                     render={({ field }) => (
                         <Autocomplete
                             {...field}
+                            isOptionEqualToValue ={(option, value) => option.label === value.label}
                             options={data}
                             renderInput={(params) =>
                                 <TextField
