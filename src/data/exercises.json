@@ -1,87 +1,87 @@
 [
   {
     "group": "Cleaning",
-    "name": "Washing-up",
+    "label": "Washing-up",
     "MET": 2
   },
   {
     "group": "Cleaning",
-    "name": "Vacuming",
+    "label": "Vacuming",
     "MET": 4
   },
   {
     "group": "Cleaning",
-    "name": "Washing the floor",
+    "label": "Washing the floor",
     "MET": 4
   },
   {
     "group": "Cleaning",
-    "name": "Ironing",
+    "label": "Ironing",
     "MET": 3.5
   },
   {
     "group": "Cleaning",
-    "name": "Washing the windows",
+    "label": "Washing the windows",
     "MET": 4
   },
   {
     "group": "Cleaning",
-    "name": "Dusting",
+    "label": "Dusting",
     "MET": 2.5
   },
   {
     "group": "Cleaning",
-    "name": "Folding laundry",
+    "label": "Folding laundry",
     "MET": 2.3
   },
   {
     "group": "Outdoor Activities",
-    "name": "Walking: slow",
+    "label": "Walking: slow",
     "MET": 2.5
   },
   {
     "group": "Outdoor Activities",
-    "name": "Walking: moderate",
+    "label": "Walking: moderate",
     "MET": 3.5
   },
   {
     "group": "Outdoor Activities",
-    "name": "Walking: fast",
+    "label": "Walking: fast",
     "MET": 4.5
   },
   {
     "group": "Outdoor Activities",
-    "name": "Running: moderate",
+    "label": "Running: moderate",
     "MET": 8
   },
   {
     "group": "Outdoor Activities",
-    "name": "Running: fast",
+    "label": "Running: fast",
     "MET": 14
   },
   {
     "group": "Outdoor Activities",
-    "name": "Bicycling: for pleasure",
+    "label": "Bicycling: for pleasure",
     "MET": 5
   },
   {
     "group": "Outdoor Activities",
-    "name": "Bicycling: moderate",
+    "label": "Bicycling: moderate",
     "MET": 10
   },
   {
     "group": "Outdoor Activities",
-    "name": "Bicycling: fast",
+    "label": "Bicycling: fast",
     "MET": 13
   },
   {
     "group": "Outdoor Activities",
-    "name": "Swimming: moderate",
+    "label": "Swimming: moderate",
     "MET": 6
   },
   {
     "group": "Outdoor Activities",
-    "name": "Swimming: fast",
+    "label": "Swimming: fast",
     "MET": 9
   }
 ]
