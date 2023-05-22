@@ -82,6 +82,22 @@ export const baseTheme: ThemeOptions = {
           textTransform: 'none'
         }
       }
+    },
+    MuiTableCell: {
+      styleOverrides: {
+        root: {
+          textAlign: 'center',
+          padding: 0
+        },
+        body: {
+          height: 40
+        },
+        head: {
+          fontSize: 12,
+          height: 40,
+          width: '15%'
+        }
+      }
     }
   }
 }

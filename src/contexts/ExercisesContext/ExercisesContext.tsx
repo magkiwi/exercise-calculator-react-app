@@ -1,6 +1,6 @@
 import React, { createContext, type FC, type ReactNode, useEffect, useMemo, useState } from 'react'
 
-import { type CalculatorFields, type ContextProps } from './ExercisesContext.types'
+import { type CalculatorFields, type CalculatorFieldsAll, type ContextProps } from './ExercisesContext.types'
 import { calculateCalories } from '../../shared/helpers/calculateCalories'
 
 const defaultContext: ContextProps = {
@@ -9,14 +9,15 @@ const defaultContext: ContextProps = {
   currentExercise: undefined,
   userWeight: undefined,
   exerciseDuration: undefined,
-  totalBurnedCalories: 0
+  totalBurnedCalories: 0,
+  allExercises: []
 }
 
 export const ExercisesContext = createContext(defaultContext)
 
 export const ExercisesContextProvider: FC<{ children?: ReactNode }> = ({ children }) => {
   const [calculatorExercise, setCalculatorExercise] = useState<CalculatorFields>()
-  const [allExercises, setAllExercises] = useState<CalculatorFields[]>([])
+  const [allExercises, setAllExercises] = useState<CalculatorFieldsAll[]>([])
   const [totalBurnedCalories, setTotalBurnedCalories] = useState<number>(0)
 
   const currentExercise = useMemo(() => calculatorExercise?.exercise, [calculatorExercise])
@@ -24,7 +25,12 @@ export const ExercisesContextProvider: FC<{ children?: ReactNode }> = ({ childre
   const exerciseDuration = useMemo(() => calculatorExercise?.duration, [calculatorExercise])
 
   useEffect(() => {
-    if (calculatorExercise) setAllExercises([...allExercises, calculatorExercise])
+    if (calculatorExercise) {
+      setAllExercises([...allExercises, {
+        ...calculatorExercise,
+        kcal: calculateCalories(calculatorExercise)
+      }])
+    }
   }, [calculatorExercise])
 
   useEffect(() => {
@@ -40,6 +46,7 @@ export const ExercisesContextProvider: FC<{ children?: ReactNode }> = ({ childre
   return (
         <ExercisesContext.Provider
             value={{
+              allExercises,
               calculatorExercise,
               setCalculatorExercise,
               currentExercise,
